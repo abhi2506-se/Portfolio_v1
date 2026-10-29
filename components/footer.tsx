@@ -80,6 +80,18 @@ export function Footer() {
                 <span className="text-xs text-green-600 font-medium">{t('footer.open_to_opportunities')}</span>
               </div>
             )}
+
+            {/* Sell With Boost listing badge */}
+            <div className="mt-4">
+              <a href="https://sellwithboost.com" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="https://sellwithboost.com/badge/listing.svg"
+                  alt="Listed on Sell With boost"
+                  loading="lazy"
+                  style={{ height: '40px', width: 'auto' }}
+                />
+              </a>
+            </div>
           </motion.div>
 
           {/* Quick links */}
@@ -129,18 +141,6 @@ export function Footer() {
           <p className="text-xs text-muted-foreground flex items-center gap-1.5 text-center">
             © {year} {hero.name}. {t('footer.made_with')} <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" /> {t('footer.rights')}
           </p>
-
-          {/* Sell With Boost listing badge */}
-          <div className="flex justify-center">
-            <a href="https://sellwithboost.com" target="_blank" rel="noopener noreferrer">
-              <img
-                src="https://sellwithboost.com/badge/listing.svg"
-                alt="Listed on Sell With boost"
-                loading="lazy"
-                style={{ height: '40px', width: 'auto' }}
-              />
-            </a>
-          </div>
 
           {/* Legal links — only shown when content is set by admin */}
           {(hasPrivacy || hasTerms) && (
